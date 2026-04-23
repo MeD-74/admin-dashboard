@@ -1,0 +1,237 @@
+<div
+  class="min-h-screen flex font-sans text-gray-900 dark:text-white transition-colors duration-300"
+>
+  <div
+    class="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-indigo-600 to-purple-500 relative overflow-hidden flex-col justify-between p-12 text-white"
+  >
+    <div
+      class="absolute top-[-15%] right-[-10%] w-[30rem] h-[30rem] bg-white opacity-10 rounded-full blur-3xl"
+    ></div>
+    <div
+      class="absolute bottom-[-10%] left-[-10%] w-[25rem] h-[25rem] bg-indigo-900 opacity-20 rounded-full blur-3xl"
+    ></div>
+
+    <div class="flex items-center gap-3 z-10">
+      <div class="bg-white/20 p-2 rounded-lg">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+          ></path>
+        </svg>
+      </div>
+      <div>
+        <h1 class="text-xl font-bold tracking-tight">EmpManager</h1>
+        <p class="text-[11px] text-indigo-100 font-medium tracking-wide">Admin Portal</p>
+      </div>
+    </div>
+
+    <div class="z-10 max-w-md mt-12">
+      <h2 class="text-[2.5rem] font-bold leading-tight mb-4">
+        Welcome back to your<br />team's command center.
+      </h2>
+      <p class="text-indigo-100 mb-10 text-sm leading-relaxed pr-4">
+        Manage employees, track headcount, monitor activity, and onboard new hires — all from one
+        polished workspace.
+      </p>
+
+      <ul class="space-y-5">
+        <li class="flex items-center gap-3">
+          <div class="bg-white/10 p-2 rounded-lg">
+            <svg
+              class="w-5 h-5 text-indigo-50"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656-.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+              ></path>
+            </svg>
+          </div>
+          <span class="text-indigo-50 font-medium text-sm">Centralized employee directory</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <div class="bg-white/10 p-2 rounded-lg">
+            <svg
+              class="w-5 h-5 text-indigo-50"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
+              ></path>
+            </svg>
+          </div>
+          <span class="text-indigo-50 font-medium text-sm">Real-time activity tracking</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <div class="bg-white/10 p-2 rounded-lg">
+            <svg
+              class="w-5 h-5 text-indigo-50"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              ></path>
+            </svg>
+          </div>
+          <span class="text-indigo-50 font-medium text-sm">Department-level insights</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="z-10 text-xs text-indigo-200 mt-16 font-medium">
+      © 2026 EmpManager. All rights reserved.
+    </div>
+  </div>
+
+  <div
+    class="w-full lg:w-1/2 bg-[#f8f9fc] dark:bg-slate-900 flex items-center justify-center relative p-6 transition-colors duration-300"
+  >
+    <button
+      (click)="darkModeService.toggle()"
+      class="absolute top-6 right-6 p-2 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
+    >
+      <svg
+        *ngIf="!darkModeService.isDarkMode()"
+        class="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+        ></path>
+      </svg>
+      <svg
+        *ngIf="darkModeService.isDarkMode()"
+        class="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+        ></path>
+      </svg>
+    </button>
+
+    <div
+      class="bg-white dark:bg-slate-800 w-full max-w-[420px] rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-8 border border-gray-100 dark:border-slate-700 transition-colors duration-300"
+    >
+      <div class="flex items-center gap-3 mb-2">
+        <div class="bg-indigo-500 p-2 rounded-lg text-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+            ></path>
+          </svg>
+        </div>
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white">Sign in to EmpManager</h2>
+      </div>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mb-6 font-medium">
+        Enter your credentials to access the admin dashboard.
+      </p>
+
+      <div
+        *ngIf="showError"
+        class="bg-red-50/80 dark:bg-red-500/10 border border-red-100 dark:border-red-500/20 text-red-500 px-4 py-3 rounded-lg text-xs font-medium mb-5"
+      >
+        Invalid username or password. Try admin / amin.
+      </div>
+
+      <form (ngSubmit)="onSubmit()">
+        <div class="mb-4">
+          <label class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1.5"
+            >Username</label
+          >
+          <input
+            type="text"
+            [(ngModel)]="username"
+            name="username"
+            class="w-full px-3 py-2.5 bg-transparent border border-gray-200 dark:border-slate-600 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 text-sm transition-all"
+            placeholder="Enter username"
+          />
+        </div>
+
+        <div class="mb-5 relative">
+          <label class="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1.5"
+            >Password</label
+          >
+          <input
+            [type]="showPassword ? 'text' : 'password'"
+            [(ngModel)]="password"
+            name="password"
+            class="w-full px-3 py-2.5 bg-transparent border border-gray-200 dark:border-slate-600 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 text-sm pr-14 transition-all"
+            placeholder="••••••••"
+          />
+          <button
+            type="button"
+            (click)="togglePassword()"
+            class="absolute right-3 top-[30px] text-xs font-semibold text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+          >
+            {{ showPassword ? 'Hide' : 'Show' }}
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between mb-6">
+          <label class="flex items-center gap-2 cursor-pointer group">
+            <input
+              type="checkbox"
+              class="w-4 h-4 text-indigo-500 border-gray-300 dark:border-slate-600 rounded focus:ring-indigo-500 dark:bg-slate-700"
+              checked
+            />
+            <span
+              class="text-xs text-gray-600 dark:text-gray-400 font-semibold group-hover:text-gray-900 dark:group-hover:text-white transition-colors"
+              >Remember me</span
+            >
+          </label>
+          <a
+            href="#"
+            class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 transition-colors"
+            >Forgot password?</a
+          >
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2.5 rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm shadow-indigo-200 text-sm"
+        >
+          Sign in
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            ></path>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
